@@ -52,6 +52,7 @@
 <script>
 import Firebase from 'firebase';
 import greyFiller from '../assets/grey_filler.jpg';
+import $ from 'jquery';
 
 export default {
     props: ['collection','index','editMode'],

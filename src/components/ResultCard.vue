@@ -77,6 +77,7 @@
 
 <script>
 import Firebase from 'firebase';
+import $ from 'jquery';
 
 export default {
     // currentCollectionId refers to the collection the ResultCard is displayed in, if any

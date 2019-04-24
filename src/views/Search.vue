@@ -57,6 +57,7 @@ import SearchResults from '../components/SearchResults';
 import Firebase from 'firebase';
 import _ from 'lodash';
 import edamamLogo from '../assets/edamam_transparent.png';
+import $ from 'jquery';
 
 export default {
     components: {
