@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sift-2.0/precache-manifest.4116852f9243b1a8b540f63207c2a4f1.js"
+  "/precache-manifest.308c0b86391180b1fd5a00aad2b3c6a2.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "sift-2"});

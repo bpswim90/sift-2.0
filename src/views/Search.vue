@@ -45,7 +45,7 @@
     <div class="navbar fixed-bottom navbar-light bg-light">
         <div class="mx-auto">
             <a href="http://developer.edamam.com">
-                <img src="/assets/edamam_transparent.png"/>
+                <img :src="edamamLogo"/>
             </a>
         </div>
     </div>
@@ -56,6 +56,7 @@
 import SearchResults from '../components/SearchResults';
 import Firebase from 'firebase';
 import _ from 'lodash';
+import edamamLogo from '../../public/assets/edamam_transparent.png';
 
 export default {
     components: {
@@ -66,7 +67,8 @@ export default {
             recipes: [],
             searchTerm: "",
             userFavoritesWithId: [],
-            notifications: []
+            notifications: [],
+            edamamLogo: edamamLogo
         }
     },
     computed: {

@@ -51,6 +51,7 @@
 
 <script>
 import Firebase from 'firebase';
+import greyFiller from '../../public/assets/grey_filler.jpg';
 
 export default {
     props: ['collection','index','editMode'],
@@ -64,21 +65,21 @@ export default {
             if (this.imgSources[0]) {
                 return this.imgSources[0]
             } else {
-                return '/assets/grey_filler.jpg'
+                return greyFiller;
             }
         },
         img2src: function() {
             if (this.imgSources[1]) {
                 return this.imgSources[1]
             } else {
-                return '/assets/grey_filler.jpg'
+                return greyFiller;
             }
         },
         img3src: function() {
             if (this.imgSources[2]) {
                 return this.imgSources[2]
             } else {
-                return '/assets/grey_filler.jpg'
+                return greyFiller;
             }
         },
     },
