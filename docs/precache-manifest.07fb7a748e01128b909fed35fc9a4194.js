@@ -40,11 +40,11 @@ self.__precacheManifest = [
     "url": "/sift-2.0/js/chunk-55b73188.f00b6865.js"
   },
   {
-    "revision": "e6cfa59b55947802fbe4",
-    "url": "/sift-2.0/js/app.8ea236bd.js"
+    "revision": "d0a652663416cfd9e6e9",
+    "url": "/sift-2.0/js/app.52141ab1.js"
   },
   {
-    "revision": "d3f3fa2d4a875803a769e86755823c1b",
+    "revision": "301287c171bd3870e756959b3c3cfd0b",
     "url": "/sift-2.0/index.html"
   },
   {
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/sift-2.0/css/chunk-17a7c31a.731ce71e.css"
   },
   {
-    "revision": "e6cfa59b55947802fbe4",
+    "revision": "d0a652663416cfd9e6e9",
     "url": "/sift-2.0/css/app.d4a554f0.css"
   }
 ];
