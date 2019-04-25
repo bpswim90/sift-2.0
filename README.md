@@ -18,6 +18,16 @@ One major limitation is the large size of bootstrap and jquery, which are used i
 
 Caching may also help, though I haven't gotten into that yet. 
 
+The user experience when the app is run as a PWA has some bugs and hiccups; for example, the lack of a back button. Also, sometimes a page will take a long time to load for reasons I don't yet understand.
+
+## How to Run as a PWA
+
+iOS:
+* Navigate to https://bpswim90.github.io/sift-2.0/ in your iPhone
+* In Safari, click the share button and scroll over to "Add to Home Screen"
+* Give the app a name if needed and click Add.
+* You're done! You should now have an icon on your homescreen that you can use to launch Sift. 
+
 ## Project setup
 ```
 npm install
