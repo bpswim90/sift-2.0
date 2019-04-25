@@ -1,14 +1,16 @@
 # sift-2.0
 
-This repo is a rebuild of https://github.com/bpswim90/sift, with some changes to play around with optimizing the performance of the app.
+This repo is a rebuild of https://github.com/bpswim90/sift, with some changes to play around with performance optimization and to make it a PWA (Progressive Web App).
 
 ## What's different?
 
 The major difference is this version is bundled with Webpack (via the Vue-cli), rather than Browserify. This allowed me to implement lazy-loading of routes in the app, and take advantage of some of the magical optimizing that webpack does. 
 
+One other *really* cool thing is that this version can be run as a PWA! This is again thanks to the magic of Vue-cli and webpack. 
+
 ## Is it better?
 
-Improvements so far have been negligible; the app's loading clocks slightly faster, though not noticeably so. On an emulated 3G phone speed, both versions seem to load in around 6s. 
+Performance improvements so far have been negligible; the app's loading clocks slightly faster, though not noticeably so. On an emulated 3G phone speed, both versions seem to load in around 6s. 
 
 ## Future Improvements
 
