@@ -3,7 +3,7 @@
         <div id="collection" class="mb-5">
             <div class="d-flex justify-content-between my-2">
                 <h1 class="my-auto">
-                    {{collectionName()}}
+                    {{collectionName}}
                 </h1>
                 <button type="button" class="btn btn-outline-primary my-auto"
                     v-bind:class="{ active: editMode }"
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Firebase from 'firebase';
+import Firebase from 'firebase/app';
 import ResultCard from '../components/ResultCard.vue';
 
 export default {
@@ -38,6 +38,8 @@ export default {
         return {
             recipes: [],
             userFavoritesWithId: [],
+            userId: '',
+            collectionName: '',
             editMode: false
         }
     },
@@ -45,9 +47,6 @@ export default {
         'result-card': ResultCard
     },
     computed: {
-        userId: function() {
-            return this.$store.getters.getUserId
-        },
         userFavoritesArray: function() {
             var favoritesArray = []
             this.userFavoritesWithId.forEach(function(favorite) {
@@ -57,16 +56,6 @@ export default {
         }
     },
     methods: {
-        collectionName: function() {
-            var ref = Firebase.database().ref('collections/' + this.userId + '/' + this.collectionId + '/name')
-            var collectionName = ""
-
-            ref.once('value', function(data) {
-                collectionName = data.val()
-            })
-
-            return collectionName
-        },
         toggleEditMode: function() {
             if (this.editMode === false) {
                 this.editMode = true
@@ -76,7 +65,7 @@ export default {
         }
     },
     created: function() {
-        var ref = Firebase.database().ref('/recipes/' + this.collectionId)
+        const ref = Firebase.database().ref('/recipes/' + this.collectionId)
 
         var recipesList = []
         ref.on('value', function(data) {
@@ -90,6 +79,18 @@ export default {
 
         this.recipes = recipesList
         this.userFavoritesWithId = this.$store.getters.getUserFavorites
+        this.userId = this.$store.getters.getUserId
+
+        const ref2 = Firebase.database().ref('collections/' + this.userId + '/' + this.collectionId + '/name')
+        
+        let collectionName = ''
+        
+        ref2.on('value', (data) => {
+            collectionName = data.val()
+            this.collectionName = collectionName;
+        })
+
+
     }
 }
 </script>

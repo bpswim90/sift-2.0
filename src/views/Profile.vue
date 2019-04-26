@@ -37,7 +37,6 @@
 <script>
 import NewCollectionForm from '../components/NewCollectionForm.vue';
 import CollectionCard from '../components/CollectionCard.vue';
-import Firebase from 'firebase';
 
 export default {
     components: {

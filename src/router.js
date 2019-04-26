@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-const Search = () => import('./views/Search.vue');
-const SignUp = () => import('./views/SignUp.vue');
-const LogIn = () => import('./views/LogIn.vue');
-const Profile = () => import('./views/Profile.vue');
-const Collection = () => import('./views/Collection.vue');
+import Search from './views/Search.vue';
+import SignUp from './views/SignUp.vue';
+import LogIn from './views/LogIn.vue';
+import Profile from './views/Profile.vue';
+import Collection from './views/Collection.vue';
 import SearchResults from './components/SearchResults.vue';
 
 Vue.use(Router);
